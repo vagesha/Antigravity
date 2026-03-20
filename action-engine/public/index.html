@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action Engine - Life Saving Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="logo">🚨 Action Engine</div>
+      <p class="subtitle">Converting chaos into verified, life-saving actions.</p>
+    </header>
+    
+    <main class="chat-container" id="chat-container">
+      <div class="welcome-message">
+        <h1>What's your emergency?</h1>
+        <p>Upload a messy medical history, describe a traffic accident, send weather radar, or use voice to get immediate structured actions.</p>
+      </div>
+      <!-- Messages append here -->
+    </main>
+    
+    <footer class="input-area">
+      <form id="chat-form">
+        <div class="file-upload">
+          <label for="media-input" class="icon-btn" title="Attach Image or Document">
+            📎
+          </label>
+          <input type="file" id="media-input" accept="image/*, application/pdf" hidden>
+        </div>
+        
+        <input type="text" id="text-input" placeholder="Type situation or attach media..." autocomplete="off" />
+        
+        <button type="button" id="voice-btn" class="icon-btn pulse" title="Voice Input">
+          🎤
+        </button>
+        
+        <button type="submit" id="send-btn" class="send-btn">
+          Send Priority
+        </button>
+      </form>
+      <div id="file-preview-container" class="hidden">
+        <span id="file-name"></span>
+        <button type="button" id="remove-file-btn">❌</button>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
